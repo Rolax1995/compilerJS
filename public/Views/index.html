@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./../css/bootstrap.css" rel="stylesheet" >
+    <link href="./../css/compiler.css" rel="stylesheet" >
+    <title>JS Compiler</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row align-items-center comp_tittle">
+            <div class="col-5" style="display: flex; justify-content: end;">
+                <div class="comp_logo_container p-4">
+                    <img src="./../assetes/img/jsLogo.png" alt="">
+                </div>
+            </div>
+            <div class="col-7">
+                <h1>JavaScript Compiler</h1>
+            </div>
+        </div>
+        <div class="row comp_descript p-4 mb-4">
+            <div class="col">
+                <div class="comp_descript_tittle">
+                    <h2>Descripción</h2>
+                </div>
+                <div class="comp_descript_text overflow-auto border rounded">
+                    <h1>Compilador JS:</h1>
+                    <p> 
+                    La siguiente aplicación consiste en un pequeño compilador el cuál es capaz de poder identificar y reconocer instrucciones de alto nivel redactadas en un lenguaje similar a JavaScript contenidas dentro de un archivo.txt el cual deberá contener su código fuente a analizar, con la diferencia de que este únicamente se puede llevar a cabo de forma estricta. 
+                    Cuando mencionamos la forma estricta de JavaScript nos referimos a la forma en la que el código es interpretado al compilarse. Es decir, el compilador reconocerá el inicio y el final de una sentencia a través del carácter especial “;” por otro lado, pero a diferencia del motor de JavaScript ese lenguaje aun carece de un motor de análisis semántico mediante el cual podría interpretar errores de omisión de declaración de variables.
+                    </p>
+                    <h2>Fases de Análisis:</h2>
+                    <p>
+                        Para este lenguaje se utilizó cómo fundamento principal la interpretación y declaración una tabla de símbolos y palabras reservadas que deberá utilizar el usuario para la implementación de estructuras de control, declaraciones o estructuras iterativas además de manejar expresiones regulares para poder identificar cada uno de los elementos de la tabla de símbolos que posee. El entorno de desarrollo que nos brinda JavaScript para el manejo de expresiones regulares, el cuál es empleado para el reconocimiento de los símbolos es “RegExpression”, este framework nos permite la identificación de cada una de las expresiones regulares contenidas en el código fuente las cuales hacen match con las expresiones definidas en el manual técnico de la presente aplicación, en esto es lo que consiste el Análisis Léxico, por lo que se muestra la tabla en la “navTab” inferior en el apartado “Analisis Lexico” el cual se activa posterior a la carga del archivo, mostrando el resultado de dicho análisis
+                    </p>
+                    <br>
+                    <p>
+                        Posteriormente a que se hallan verificado que todos los símbolos pertenecen a algún token especial del lenguaje, se inicia el análisis sintáctico del código fuente en donde se mostrará el árbol de derivación descendente por derecha, este árbol muestra el resultado de la comparación del orden de cada uno de los tokens con respecto al que describe cada una de las producciones de estos lenguajes detallados en el manual técnico. Si todo el análisis sintáctico es correcto, y existe producciones válidas para la interpretación del código, se desplegará el árbol de forma visible en Análisis Sintáctico; de existir algún token o producción inesperadas para el lenguaje el error se mostrará en el mismo lugar.
+                    </p>
+                    <h2>Ejemplos:</h2><br>
+                    <h4>Declaraciones / Asignaciones</h4>
+                    <p>Se pueden utilizar las palabras reservadas: var, let, const</p>
+                    <ul>
+                        <li><p>let a;</p></li>
+                        <li><p>const a = "Hola mundo";</p><br</li>
+                        <li><p>var a = 15;</p></li>
+                        <li><p>let a = 0.50;</p></li>
+                        <li><p>var a = true;</p></li>
+                    </ul>
+                    <h4>Expresiones</h4>
+                    <p>Se pueden reconocer las siguientes expresiones: Aritmeticas y Logicas.</p>
+                    <h6>Expresiones Aritmeticas</h6>
+                    <p>Se pueden realizar entre id y expresiones aritmeticas.</p>
+                    <ul>
+                        <li><p>Suma +</p></li>
+                        <li><p>Autoincremento ++</p></li>
+                        <li><p>Autodecremento --</p></li>
+                        <li><p>Resta -</p><br</li>
+                        <li><p>Multiplicacion *</p><br</li>
+                        <li><p>Division /</p><br</li>
+                        <li><p>Agrupaciones ()</p><br</li>
+                    </ul>
+                    <h6>Expresiones Logicas o Booleanas</h6>
+                    <p>Se pueden realizar entre id y expresiones aritmeticas o logicas.</p>
+                    <ul>
+                        <li><p>Mayor Que &#62;</p></li>
+                        <li><p>Menor Que &#60;</p><br</li>
+                        <li><p>Igualdad ==</p><br</li>
+                        <li><p>Igualdad Estricata ===</p><br</li>
+                        <li><p>Distinto De !=</p><br</li>
+                        <li><p>Distinto De Estricto !==;</p><br</li>
+                        <li><p>AND &&;</p></li>
+                        <li><p>OR ||;</p></li>
+                    </ul>
+                    <h4>Estructura de Control</h4>
+                    <p>Se puede reconocer un if con condicion simple o compuesta con and y or</p>
+                    <ul>
+                        <li><p>if(a &#62; 100)&#123;</p><p>a=a+1;</p><p>&#125;;</p></li>
+                    </ul>
+                    <h4>Estructura Iterativa</h4>
+                    <p>Se puede reconocer: while, do-while, for</p>
+                    <ul>
+                        <li><p>while(a &#60; 100)&#123;</p>a++;<p>&#125;;</p></li>
+                    </ul>
+                    <h4>Funciones</h4>
+                    <p>Se puede reconocer: while, do-while, for</p>
+                    <ul>
+                        <li><p>function autoCuenta()&#123;</p><p>while(a &#60; 100)&#123;</p>a++;<p>&#125;;</p><p>&#125;;</p></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="row p-4 mb-4">
+            <div class="col">
+                <div class="mb-3">
+                    <label for="compiler_file_input" class="form-label comp_label_input">Default file input example</label>
+                    <input class="form-control" type="file" id="compiler_file_input" accept=".txt" onchange="showfile(this)">
+                </div>
+            </div>
+        </div>
+        <div class="row p-4">
+            <div class="comp_result_tittle">
+                <h2>Resultados</h2>
+            </div>
+            <div class="col">
+                <ul class="nav nav-tabs" id="analysisStatus" role="tablist">
+                    <li class="nav-item" role="presentation">
+                      <button class="nav-link active" id="compiler-fontCode" data-bs-toggle="tab" data-bs-target="#compiler-fontCode-content" type="button" role="tab" aria-controls="compiler-fontCode-content" aria-selected="true">Codigo Fuente</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <button class="nav-link" id="compiler-lexAnalysis" data-bs-toggle="tab" data-bs-target="#compiler-lexical" type="button" role="tab" aria-controls="compiler-lexical" aria-selected="false" disabled>Analisis Lexico</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <button class="nav-link" id="compiler-sinAnalysis" data-bs-toggle="tab" data-bs-target="#compiler-sintactical" type="button" role="tab" aria-controls="compiler-sintactical" aria-selected="false" disabled>Analisis Sintáctico</button>
+                    </li>
+                </ul>
+                <div class="tab-content" id="analysisContent">
+                    <div class="tab-pane fade show active" id="compiler-fontCode-content" role="tabpanel" aria-labelledby="compiler-objCode-content">
+                        <div class="row border border border-1">
+                            <div  id="objCode-container" class="col comp_navTabs overflow-auto">
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="compiler-lexical" role="tabpanel" aria-labelledby="compiler-lexical">
+                        <div class="row border border border-1">
+                            <div  id="lexical-container" class="col comp_navTabs overflow-auto">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="compiler-sintactical" role="tabpanel" aria-labelledby="compiler-sintactical">
+                        <div class="row border border-1">
+                            <div  id="sintactical-container" class="col comp_navTabs overflow-auto">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="./../js/bootstrap.js" ></script>
+    <script src="./../js/jQuery-3.7.0.min.js"></script>
+    <script src="./../js/compiler.js"></script>
+</body>
+</html>

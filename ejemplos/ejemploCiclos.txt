@@ -1,0 +1,12 @@
+//while(a < 100){
+//    a=a+1;
+//}
+
+//for(let i = 0; i < terminal; i++){
+//    a=a+1;
+//}
+
+do{
+ let a = 0;
+ a++;
+}while(a > 100);
