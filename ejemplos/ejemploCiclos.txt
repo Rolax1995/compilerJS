@@ -6,7 +6,7 @@
 //    a=a+1;
 //}
 
+let a = 0;
 do{
- let a = 0;
  a++;
 }while(a > 100);
